@@ -1,7 +1,11 @@
-let counter = 1000; // Initialize the counter to 1
+// Get the counter from local storage or initialize it to 1000 if not present
+let counter = localStorage.getItem('counter') ? parseInt(localStorage.getItem('counter')) : 1000;
 
-function increaseCounter() {
-  counter++; // Increase counter by 1
-  document.getElementById("counterValue").textContent = counter; // Update counter in the page
-  document.getElementById("counterValueDisplay").textContent = counter; // Update another counter display
-}
+// Increase the counter by 1
+counter++;
+
+// Save the updated counter back to local storage
+localStorage.setItem('counter', counter);
+
+// Display the counter on the page
+document.getElementById("counterValueDisplay").textContent = counter;

@@ -1,0 +1,564 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*HEADER
+============================================
+*/
+
+.header {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    background-color: #e0e0e059;
+}
+
+.header .left-info {
+    text-align: left;
+}
+
+.header .name h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.header .contact-info {
+    font-size: 14px;
+    text-align: center;
+}
+
+.header .photo {
+    text-align: right;
+    padding-right: 30px;
+}
+
+.header img {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    justify-content: flex-start; /* Ensures items are aligned to the left */
+
+    align-items: left; 
+}
+
+.nav-menu a {
+    display: flex;
+    text-decoration: none;
+    color: black; 
+    font-size: 16px;
+    margin-bottom: 5px;
+    margin-right: 15px; 
+}
+
+.nav-menu a:hover {
+    text-decoration: underline;
+}
+
+.dropdown {
+    display: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.icon-spacing {
+    margin-right: 5px; /* Space between icon and text */
+  }
+  
+  .icon-spacing, .icon-spacing i {
+    vertical-align: middle; /* Ensure icons align with text */
+  }
+  
+  
+
+
+/* SECTION (CERTIFICATIONS + MAIN-SECTION 
+============================================
+*/
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.right-section {
+    background-color: #e0e0e059;
+    padding: 20px;
+    flex-basis: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right-section .cert-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.right-section img {
+    height: 90px;
+    width: auto;
+}
+
+.visitor-box {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    width: 150px;
+}
+
+/* Languages Section */
+.language-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+.language-list img {
+    width: 20px;
+    height: 20px;
+    padding-right: 5px;
+    vertical-align: middle;
+}
+
+.language-list li {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.language-level {
+    font-weight: bold;
+    color: #007bff; /* Matches the link color for consistency */
+}
+
+/* Skills Section */
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.skills-list li {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.skills-list li::before {
+    content: "\2023"; /* Bullet point */
+    color: #000000; /* Matches the theme color */
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Interests Section */
+.interests-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.interests-list li {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.interests-list li::before {
+    content: "\2023"; /* Bullet point */
+    color: #000000; /* Matches the theme color */
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.main-section {
+    background-color: white;
+    padding: 20px;
+    flex-basis: 75%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* EXPERIENCE SECTION
+============================================
+*/
+
+.experience-item {
+    margin-bottom: 20px;
+}
+
+.experience-item h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #007bff;
+}
+
+.experience-item span {
+    font-size: 14px;
+    color: #000000;
+}
+
+.experience-item p {
+    margin: 5px 0;
+}
+
+.job-recommendation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+}
+  
+.job-recommendation ul {
+list-style: none; 
+padding-left: 0;
+margin-right: 20px; 
+}
+
+.job-recommendation ul li {
+position: relative;
+display: flex;
+flex-basis: 70%;
+padding-left: 15px;
+margin-bottom: 10px;
+}
+
+.job-recommendation ul li::before {
+content: "\2022"; 
+color: black;
+font-weight: bold;
+position: absolute;
+left: 0;
+top: 0;
+}
+
+/* Updated .recommendation-link and dropdown */
+.recommendation-link {
+    display: flex;
+    flex-basis: 30%;
+    align-items: center;
+    text-decoration: none;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.recommendation-link i {
+    color: red;
+    border: #000000;
+}
+
+.recommendation-link:hover {
+    text-decoration: underline;
+}
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Hidden dropdown content initially */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Display dropdown when hovering over the link */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Style the dropdown links */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* PROJECTS
+============================================
+*/
+
+.project-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.project-list li {
+    margin-bottom: 20px;
+}
+
+.project-link {
+    margin-top: 5px;
+}
+
+.project-separator {
+  border: none;
+  border-top: 2px solid #ccc; /* Gray color for the line */
+  margin: 10px 0; /* Adds space above and below the line */
+}
+
+
+.view-project {
+    color: #007bff; 
+    text-decoration: none;
+}
+
+.view-project img {
+    height: 16px; 
+    vertical-align: middle; 
+    margin-left: 5px; 
+}
+
+.technologies {
+    margin-top: 5px;
+    font-style: italic; 
+}
+
+.youtube-channel {
+    margin-top: 10px;
+}
+
+.youtube-link {
+    color: #ff0000; 
+    text-decoration: none;
+}
+
+.youtube-channel img {
+    height: 16px; 
+    vertical-align: middle; 
+    margin-left: 5px; 
+}
+
+/* EDUCATION
+============================================
+*/
+
+.education-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.education-list li {
+    margin-bottom: 20px;
+}
+
+.certification-list li {
+    list-style-type: circle;
+    color: black;
+}
+
+.certification-list li:hover {
+    color: blue; 
+    text-decoration: underline; 
+}
+
+.education-details {
+    margin-top: 5px;
+}
+
+
+
+/* Media Queries for Mobile Devices */
+
+/* General Mobile Viewport Adjustments */
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    
+    .container {
+        padding: 10px;
+        margin: 10px;
+        box-shadow: none;
+    }
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .header .photo img {
+        height: 100px;
+        width: 100px;
+    }
+
+    .header .name h1 {
+        font-size: 28px;
+    }
+
+    .header .contact-info {
+        font-size: 12px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-menu a {
+        margin: 5px 0;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .right-section {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+
+    .main-section {
+        flex-basis: 100%;
+    }
+}
+
+/* Adjustments for Extra Small Screens */
+@media only screen and (max-width: 480px) {
+    .header .photo img {
+        height: 80px;
+        width: 80px;
+    }
+
+    .header .name h1 {
+        font-size: 24px;
+    }
+
+    .header .contact-info {
+        font-size: 10px;
+    }
+
+    .visitor-box {
+        width: auto;
+        padding: 8px;
+    }
+
+    .language-list li, .skills-list li, .interests-list li {
+        font-size: 14px;
+    }
+
+    .job-recommendation {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .job-recommendation ul {
+        margin-right: 0;
+    }
+
+    .recommendation-link {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+/* For Narrow Mobile Screens */
+@media only screen and (max-width: 360px) {
+    .header {
+        padding: 5px;
+    }
+
+    .header .name h1 {
+        font-size: 20px;
+    }
+
+    .right-section .cert-row img {
+        height: 60px;
+    }
+
+    .nav-menu a {
+        font-size: 12px;
+    }
+
+    .view-project img, .youtube-channel img {
+        height: 12px;
+    }
+}

@@ -1,0 +1,303 @@
+:root {
+  --primary: #e74c3c;
+  --light: #f7f7f7;
+  --dark: #333;
+  --card-bg: #ff4f4f;
+  --text-light: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--light);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+
+header {
+  background: var(--light);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header .profile {
+  display: flex;
+  align-items: center;      /* Center horizontally */
+  gap: 0.5rem;              /* Space between elements */
+  text-align: center;
+}
+
+
+header .profile img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.5rem;    /* Extra spacing below the image */
+}
+
+.profile-info h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 0.25rem;
+}
+
+
+.profile-info p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+}
+
+
+
+.logo-socials {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: left;
+  gap: 1rem;
+}
+
+.logo-socials a img {
+  width: 24px;
+  height: 24px;
+  transition: filter 0.3s ease;
+  filter: invert(15%);
+}
+
+.logo-socials a:hover img {
+  filter: invert(40%) sepia(100%) saturate(800%) hue-rotate(-10deg);
+}
+
+.logo-socials a {
+  font-size: 1.5rem;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.logo-socials a:hover {
+  color: #e74c3c;
+}
+
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1em;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  padding: 0.5em 1em;
+  display: block;
+  color: inherit;
+}
+
+/* Dropdown container */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 140px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+  top: 100%;
+  left: 0;
+  border: 1px solid #ddd;
+}
+
+/* Dropdown links */
+.dropdown-content li a {
+  padding: 0.5em 1em;
+  color: black;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Optional: change dropdown link color on hover */
+.dropdown-content li a:hover {
+  background-color: #f0f0f0;
+}
+
+
+nav a {
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--primary);
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #fff;
+}
+
+.hero h2 {
+  font-family: 'Quicksand', sans-serif;
+
+
+  font-size: 2.5rem;
+  color: var(--dark);
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.hero .cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--primary);
+  color: var(--text-light);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.hero .cta:hover {
+  background: #c0392b;
+}
+
+.hero .socials {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.hero .socials a {
+  font-size: 1.5rem;
+  color: var(--dark);
+  transition: color 0.3s;
+}
+
+.hero .socials a:hover {
+  color: var(--primary);
+}
+
+.projects {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: var(--card-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s;
+  border: 2px solid black;
+  /* Optional: add some padding or margin if needed */
+  padding: 1em;
+  box-sizing: border-box; /* to include padding in s
+  transition: transform 0.3s ease; /* Smooth scaling */
+}
+
+.project-card:hover {
+  transform: scale(1.05); /* Slightly bigger on hover */
+  z-index: 10; /* Make sure it’s above others when hovered */
+}
+
+.project-card a.project-link {
+  display: block;
+  color: inherit;          /* Keep text color */
+  text-decoration: none;   /* Remove underline */
+}
+
+
+.project-card img {
+  width: 80%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.project-info {
+  padding: 1rem;
+  color: var(--text-light);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-info h3 {
+    font-family: 'Quicksand', sans-serif;
+
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-info p {
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #fff;
+}
+
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2rem;
+  }
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}

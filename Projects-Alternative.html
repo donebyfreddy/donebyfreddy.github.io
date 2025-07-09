@@ -1,0 +1,148 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Federico Mencuccini – Portfolio</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6 (Free CDN, required for icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- ICON -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/Projects.css" />
+</head>
+
+<body>
+  <header>
+  <div class="profile">
+    <img src="images/fmencuccini.webp" alt="Your Photo" width="200" height="200" />
+    <div class="profile-info">
+      <h1>Federico Mencuccini</h1>
+      <div class="logo-socials">
+        <a href="https://www.youtube.com/@freddylife01" target="_blank" aria-label="YouTube">
+          <i class="fa-brands fa-youtube" style="color: #ff3d3d;"></i>
+        </a>
+        <a href="https://linkedin.com/in/fomencuccini" target="_blank" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin" style="color: #128eed;"></i>
+        </a>
+        <a href="https://github.com/donebyfreddy/" target="_blank" aria-label="GitHub">
+          <i class="fa-brands fa-github" style="color: #000000;"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#projects" class="active">Projects</a></li>
+
+      <li class="dropdown">
+        <a href="#cv" class="dropbtn">CV ▼</a>
+        <ul class="dropdown-content">
+          <li><a href="files/CV_INF_ESPANOL_CLOUD.pdf" target="_blank">Spanish CV</a></li>
+          <li><a href="files/CV_INF_ENGLISH_CLOUD.pdf" target="_blank">English CV</a></li>
+        </ul>
+      </li>
+
+      <li><a href="#contact">Contact me</a></li>
+    </ul>
+  </nav>
+
+  </header>
+
+  <section class="hero">
+    <h2>My Projects</h2>
+    <p>In this page, all my projects will be showcased</p>
+    <a href="#projects" class="cta">Check Below <i class="fas fa-arrow-down"></i></a>
+    <div class="socials">
+      <a href="#"><i class="fab fa-phone"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fas fa-envelope"></i></a>
+    </div>
+  </section>
+
+  <main id="projects" class="projects">
+    <div class="projects-grid">
+      <article class="project-card">
+        <a href="MyProjects/ModernSMTP.html" class="project-link">
+          <img src="images/ModernSMTP.png" alt="ModernSMTP" />
+          <div class="project-info">
+            <h3>ModernSMTP</h3>
+            <p>Secure Microsoft 365 Email for PrestaShop</p>
+          </div>
+        </a>
+      </article>
+
+      <article class="project-card">
+        <a href="MyProjects/Stockify.html" class="project-link">
+          <img src="images/Stockify_ICON_white.webp" alt="Stockify" />
+          <div class="project-info">
+            <h3>Stockify</h3>
+            <p>Inventory Management System made in Python</p>
+          </div>
+        </a>
+      </article>
+
+      <article class="project-card">
+        <a href="MyProjects/AzureResume.html" class="project-link">
+          <img src="images/azure.webp" alt="Azure Resume Challenge" />
+          <div class="project-info">
+            <h3>Azure Resume Challenge</h3>
+            <p>My Resume powered by Microsoft Azure</p>
+          </div>
+        </a>
+      </article>
+
+      <article class="project-card">
+        <a href="MyProjects/StockCloud.html" class="project-link">
+          <img src="images/stockcloud.webp" alt="StockCloud" />
+          <div class="project-info">
+            <h3>StockCloud</h3>
+            <p>IVMS hosted on Azure using Node.JS, React, SQL Server and AI</p>
+          </div>
+        </a>
+      </article>
+
+      <article class="project-card">
+        <a href="MyProjects/PythonScraping.html" class="project-link">
+          <img src="images/Python3d.webp" alt="Python Scraping" />
+          <div class="project-info">
+            <h3>Python Scraping</h3>
+            <p>Scripts for scraping data and automating tasks</p>
+          </div>
+        </a>
+      </article>
+
+
+      <article class="project-card">
+        <a href="MyProjects/CustomPCBuilds.html" class="project-link">
+          <img src="images/Main-PC-Gamer.webp" alt="Custom PC Build and Resale" />
+          <div class="project-info">
+            <h3>Custom PC Build and Resale</h3>
+            <p>Designed and built custom PCs optimized for Gaming</p>
+          </div>
+        </a>
+      </article>
+
+      <article class="project-card">
+        <a href="MyProjects/InternalWikipedia.html" class="project-link">
+          <img src="images/dokuwiki.webp" alt="Internal Wikipedia" />
+          <div class="project-info">
+            <h3>Internal Wikipedia</h3>
+            <p>Powered by Dokuwiki</p>
+          </div>
+        </a>
+      </article>
+    </div>
+  </main>
+
+  <footer id="contact">
+    <p>&copy; 2025 Federico Mencuccini. All rights reserved.</p>
+  </footer>
+</body>
+</html>

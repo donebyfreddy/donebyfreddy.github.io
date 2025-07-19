@@ -222,9 +222,13 @@ nav a.active {
 }
 
 .carousel-images {
+  width: 100%;
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
 }
+
 
 .carousel-img {
   min-width: 100%;

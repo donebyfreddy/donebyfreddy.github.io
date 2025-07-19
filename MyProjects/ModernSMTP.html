@@ -110,12 +110,31 @@
     </div>
   </section>
 
+  <!-- Carousel Section -->
+  <section class="carousel-section">
+    <h2 class="section-title">Project Screenshots</h2>
+    <div class="carousel-container">
+      <button class="carousel-btn prev">&#10094;</button>
+      <div class="carousel-images">
+        <img src="../images/Carrusel-1_ModuleUpload.webp" alt="Screenshot 1" class="carousel-img active">
+        <img src="../images/Carrusel-2_ModuleConfigure.webp" alt="Screenshot 2" class="carousel-img">
+        <img src="../images/Carrusel-3_Authorization.webp" alt="Screenshot 3" class="carousel-img">
+        <img src="../images/Carrusel-4_Test-Email-Proof.webp" alt="Screenshot 4" class="carousel-img">
+      </div>
+      
+      <button class="carousel-btn next">&#10095;</button>
+    </div>
+  </section>
+
+
 
 
   <section class="documentation" id="documentation">
     <h2>Documentation</h2>
     <p>Comprehensive guides and API references to help you configure and use the ModernSMTP module effectively.</p>
-    <a class="cta blue" href="https://www.dropbox.com/scl/fi/54y4fbs350rlprbr07xlz/ModernSMTP-Manual.pdf?rlkey=d61mx104imoi4mpqrp1wiik9e&st=3s9uj4a5&dl=0" target="_blank" rel="noopener noreferrer">
+    <a class="cta blue"
+      href="https://www.dropbox.com/scl/fi/54y4fbs350rlprbr07xlz/ModernSMTP-Manual.pdf?rlkey=d61mx104imoi4mpqrp1wiik9e&st=3s9uj4a5&dl=0"
+      target="_blank" rel="noopener noreferrer">
       <i class="fas fa-file-alt" style="margin-right: 8px;"></i>
       View Documentation
     </a>
@@ -130,11 +149,32 @@
 </body>
 
 <script>
-  document.querySelector('a[href="#features-section"]').addEventListener('click', function(e) {
-  e.preventDefault();
-  document.querySelector('#features-section').scrollIntoView({ behavior: 'smooth' });
-});
+  document.querySelector('a[href="#features-section"]').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector('#features-section').scrollIntoView({ behavior: 'smooth' });
+  });
+
+
+  const images = document.querySelectorAll('.carousel-img');
+  let currentIndex = 0;
+
+  function showImage(index) {
+    images.forEach((img, i) => img.classList.toggle('active', i === index));
+  }
+
+  document.querySelector('.carousel-btn.prev').addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+  });
+
+  document.querySelector('.carousel-btn.next').addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+  });
+
 
 </script>
+
+
 
 </html>

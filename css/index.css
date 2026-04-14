@@ -72,6 +72,21 @@ body {
     margin-right: 15px; 
 }
 
+.job-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 5px;
+}
+
+.company-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%; /* makes it circular */
+    border: 2px solid #ddd;
+}
+
 .nav-menu a:hover {
     text-decoration: underline;
 }
